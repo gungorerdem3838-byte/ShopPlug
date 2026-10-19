@@ -1,0 +1,57 @@
+# ============================================
+#   SimpleShop - Ayarlar
+# ============================================
+
+# Sayı biçimi için dil (1.500,5 gibi). Türkçe için tr-TR, İngilizce için en-US.
+locale: tr-TR
+
+# Fiyatı veya kategorisinde para birimi belirtilmeyen eşyaların kullandığı para birimi.
+# Aşağıdaki "currencies" bölümündeki bir anahtar olmalı.
+default-currency: vault
+
+# Para birimleri
+#   type: VAULT    -> Vault + sunucudaki ekonomi eklentisi (EssentialsX, CMI vb.) otomatik tanınır
+#   type: INTERNAL -> eklentinin kendi bakiye sistemi (ek para birimi), data/balances.yml içinde tutulur
+# İstediğin kadar INTERNAL para birimi ekleyebilirsin.
+# shop.yml içinde bir eşyaya / kategoriye `currency: kristal` yazarak o para biriminle satabilirsin.
+currencies:
+  vault:
+    type: VAULT
+    enabled: true
+    name: "Para"
+    symbol: "$"
+    format: "{symbol}{amount}"     # {symbol} {name} {amount} kullanılabilir (renk kodu da olur)
+    decimals: 2
+    use-economy-format: false      # true: biçimi ekonomi eklentisi belirler
+
+  kristal:
+    type: INTERNAL
+    enabled: true
+    name: "Kristal"
+    symbol: "✦"
+    format: "&b{amount} Kristal"
+    decimals: 0
+    starting-balance: 0
+
+# Bakiyelerin diske otomatik kaydedilme aralığı (dakika)
+autosave-minutes: 5
+
+# Satın alma / satma seslerini çal
+sounds: true
+
+# Menü ayarları
+gui:
+  main-rows: 5                         # ana menü satır sayısı (3-6)
+  show-balance: true                   # bakiye göstergesi
+  balance-material: GOLD_INGOT
+  filler-material: GRAY_STAINED_GLASS_PANE   # boş slot dolgusu (kapatmak için NONE)
+
+# Ticaret ayarları
+trade:
+  # Komut eşyaları (shop.yml'de `command:` olanlar) kim tarafından çalıştırılsın?
+  #   console -> konsol (%player% yer tutucusu oyuncu adıdır)
+  #   player  -> tıklayan oyuncu
+  # Eşya bazında `run-as: player|console` ile geçersiz kılınabilir.
+  command-executor: console
+  # Her alış/satışı konsola yaz
+  log-transactions: false
