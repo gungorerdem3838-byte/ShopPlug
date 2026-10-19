@@ -1,0 +1,47 @@
+name: SimpleShop
+version: '${project.version}'
+main: com.simpleshop.SimpleShopPlugin
+api-version: '1.21'
+description: Vault destekli, ek para birimli market eklentisi
+softdepend: [Vault]
+
+commands:
+  shop:
+    description: Marketi açar
+    usage: /<command> [kategori]
+    aliases: [market, magaza]
+    permission: simpleshop.use
+  sell:
+    description: Elindeki veya envanterindeki eşyaları satar
+    usage: /<command> <hand|all>
+    aliases: [sat]
+    permission: simpleshop.sell
+  currency:
+    description: Para birimlerini göster / yönet
+    usage: /<command> [balance|list|pay|give|take|set]
+    aliases: [ekpara]
+    permission: simpleshop.currency
+  simpleshop:
+    description: SimpleShop yönetim komutu
+    usage: /<command> <reload|info>
+    permission: simpleshop.admin
+
+permissions:
+  simpleshop.use:
+    description: Marketi kullanma
+    default: true
+  simpleshop.sell:
+    description: /sell komutunu kullanma
+    default: true
+  simpleshop.currency:
+    description: /currency ile bakiye görme
+    default: true
+  simpleshop.currency.pay:
+    description: Başka oyunculara para birimi gönderme
+    default: true
+  simpleshop.currency.admin:
+    description: give / take / set ve başkasının bakiyesini görme
+    default: op
+  simpleshop.admin:
+    description: /simpleshop reload
+    default: op

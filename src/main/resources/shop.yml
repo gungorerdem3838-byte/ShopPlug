@@ -1,0 +1,414 @@
+# ============================================
+#   SimpleShop - Zor Ekonomi v4 (Türkçe)
+#   Tüm fiyatlar ×10 | Satış = Alış × 0.25
+#   1.21.11 eşyaları + Spawner sekmesi
+#   Spawnerlar Kristal ile satılır
+# ============================================
+
+categories:
+
+  # ==================== BLOKLAR ====================
+  blocks:
+    name: '&a&lBloklar'
+    description: ['&7İnşaat blokları ve malzemeler', '&7Göz atmak için tıkla!']
+    icon: GRASS_BLOCK
+    slot: 10
+    permission: ''
+    items:
+      '0':  { material: DIRT,           name: '&7Toprak',            lore: ['&7Sıradan toprak bloğu'],        buy-price: 150.0,     sell-price: 30.0 }
+      '1':  { material: COBBLESTONE,    name: '&7Moloz Taşı',        lore: ['&7Temel inşaat bloğu'],          buy-price: 90.0,      sell-price: 30.0 }
+      '2':  { material: STONE,          name: '&7Taş',               lore: ['&7Pişirilmiş moloz'],            buy-price: 240.0,     sell-price: 60.0 }
+      '3':  { material: STONE_BRICKS,   name: '&7Taş Tuğla',         lore: ['&7İşlenmiş taş'],                buy-price: 450.0,     sell-price: 120.0 }
+      '4':  { material: DEEPSLATE,      name: '&8Derin Taş',         lore: ['&7Derinlerdeki taş'],            buy-price: 360.0,     sell-price: 90.0 }
+      '5':  { material: GRASS_BLOCK,    name: '&aÇim Bloğu',         lore: ['&7Doğal çim'],                   buy-price: 300.0,     sell-price: 60.0 }
+      '6':  { material: SAND,           name: '&eKum',               lore: ['&7Cam için'],                    buy-price: 150.0,     sell-price: 30.0 }
+      '7':  { material: SANDSTONE,      name: '&eKum Taşı',          lore: ['&7Çöl bloğu'],                   buy-price: 450.0,     sell-price: 120.0 }
+      '8':  { material: GRAVEL,         name: '&7Çakıl',             lore: ['&7Çakmak taşı için'],            buy-price: 150.0,     sell-price: 30.0 }
+      '9':  { material: CLAY,           name: '&7Kil',               lore: ['&7Tuğla için'],                  buy-price: 600.0,     sell-price: 150.0 }
+      '10': { material: OAK_LOG,        name: '&6Meşe Kütüğü',       lore: ['&7Ahşap kütük'],                 buy-price: 450.0,     sell-price: 120.0 }
+      '11': { material: OAK_PLANKS,     name: '&6Meşe Tahtası',      lore: ['&7Ahşap tahta'],                 buy-price: 120.0,     sell-price: 30.0 }
+      '12': { material: BIRCH_LOG,      name: '&fHuş Kütüğü',        lore: ['&7Beyaz ahşap'],                 buy-price: 540.0,     sell-price: 120.0 }
+      '13': { material: SPRUCE_LOG,     name: '&6Ladin Kütüğü',      lore: ['&7Koyu ahşap'],                  buy-price: 540.0,     sell-price: 120.0 }
+      '14': { material: GLASS,          name: '&fCam',               lore: ['&7Şeffaf blok'],                 buy-price: 600.0,     sell-price: 150.0 }
+      '15': { material: GLASS_PANE,     name: '&fCam Panel',         lore: ['&7Pencere paneli'],              buy-price: 180.0,     sell-price: 45.0 }
+      '16': { material: NETHERRACK,     name: '&cNether Taşı',       lore: ['&7Nether bloğu'],                buy-price: 240.0,     sell-price: 60.0 }
+      '17': { material: OBSIDIAN,       name: '&5Obsidyen',          lore: ['&7Patlamaya dayanıklı'],         buy-price: 6000.0,    sell-price: 1500.0 }
+      '18': { material: END_STONE,      name: '&eEnd Taşı',          lore: ['&7End bloğu'],                   buy-price: 900.0,     sell-price: 210.0 }
+      '19': { material: ICE,            name: '&bBuz',               lore: ['&7Donmuş su'],                   buy-price: 300.0,     sell-price: 60.0 }
+      '20': { material: MYCELIUM,       name: '&5Miselyum',          lore: ['&7Mantar bloğu'],                buy-price: 1500.0,    sell-price: 360.0 }
+    subcategories: {}
+
+
+  # ==================== CEVHERLER ====================
+  ores:
+    name: '&b&lCevherler ve Mineraller'
+    description: ['&7Cevherler, külçeler ve bloklar', '&7Göz atmak için tıkla!']
+    icon: DIAMOND
+    slot: 12
+    permission: ''
+    items:
+      '0':  { material: COAL,              name: '&8Kömür',             lore: ['&7Yakıt kaynağı'],           buy-price: 900.0,     sell-price: 210.0 }
+      '1':  { material: CHARCOAL,          name: '&8Odun Kömürü',       lore: ['&7Yanmış ahşap'],            buy-price: 750.0,     sell-price: 180.0 }
+      '2':  { material: RAW_IRON,          name: '&fHam Demir',         lore: ['&7İşlenmemiş cevher'],       buy-price: 1800.0,    sell-price: 450.0 }
+      '3':  { material: IRON_INGOT,        name: '&fDemir Külçesi',     lore: ['&7İşlenmiş demir'],          buy-price: 2400.0,    sell-price: 600.0 }
+      '4':  { material: RAW_GOLD,          name: '&6Ham Altın',         lore: ['&7İşlenmemiş cevher'],       buy-price: 3000.0,    sell-price: 750.0 }
+      '5':  { material: GOLD_INGOT,        name: '&6Altın Külçesi',     lore: ['&7İşlenmiş altın'],          buy-price: 3600.0,    sell-price: 900.0 }
+      '6':  { material: RAW_COPPER,        name: '&cHam Bakır',         lore: ['&7İşlenmemiş cevher'],       buy-price: 1200.0,    sell-price: 300.0 }
+      '7':  { material: COPPER_INGOT,      name: '&cBakır Külçesi',     lore: ['&7İşlenmiş bakır'],          buy-price: 1500.0,    sell-price: 360.0 }
+      '8':  { material: REDSTONE,          name: '&cKızıltaş',          lore: ['&7Devre yakıtı'],            buy-price: 1200.0,    sell-price: 300.0 }
+      '9':  { material: LAPIS_LAZULI,      name: '&9Lapis Lazuli',      lore: ['&7Büyüleme'],               buy-price: 1500.0,    sell-price: 360.0 }
+      '10': { material: QUARTZ,            name: '&fNether Kuvarsı',    lore: ['&7Beyaz mineral'],           buy-price: 1800.0,    sell-price: 450.0 }
+      '11': { material: AMETHYST_SHARD,    name: '&dAmetist Parçası',   lore: ['&7Jeot kristali'],           buy-price: 2400.0,    sell-price: 600.0 }
+      '12': { material: DIAMOND,           name: '&bElmas',             lore: ['&7Değerli mücevher'],        buy-price: 24000.0,   sell-price: 6000.0 }
+      '13': { material: EMERALD,           name: '&aZümrüt',            lore: ['&7Köylü takası'],            buy-price: 18000.0,   sell-price: 4500.0 }
+      '14': { material: NETHERITE_SCRAP,   name: '&4Netherit Parçası',  lore: ['&7Kadim kalıntı'],           buy-price: 90000.0,   sell-price: 22500.0 }
+      '15': { material: NETHERITE_INGOT,   name: '&4&lNetherit Külçesi',lore: ['&7En güçlü malzeme'],        buy-price: 450000.0,  sell-price: 112500.0 }
+      '16': { material: COAL_BLOCK,        name: '&8Kömür Bloğu',       lore: ['&7Sıkıştırılmış yakıt'],     buy-price: 8100.0,    sell-price: 2010.0 }
+      '17': { material: IRON_BLOCK,        name: '&fDemir Bloğu',       lore: ['&7Sıkıştırılmış demir'],     buy-price: 21600.0,   sell-price: 5400.0 }
+      '18': { material: GOLD_BLOCK,        name: '&6Altın Bloğu',       lore: ['&7Sıkıştırılmış altın'],     buy-price: 32400.0,   sell-price: 8100.0 }
+      '19': { material: DIAMOND_BLOCK,     name: '&bElmas Bloğu',       lore: ['&7Sıkıştırılmış elmas'],     buy-price: 216000.0,  sell-price: 54000.0 }
+      '20': { material: EMERALD_BLOCK,     name: '&aZümrüt Bloğu',      lore: ['&7Sıkıştırılmış zümrüt'],    buy-price: 162000.0,  sell-price: 40500.0 }
+      '21': { material: LAPIS_BLOCK,       name: '&9Lapis Bloğu',       lore: ['&7Sıkıştırılmış lapis'],     buy-price: 13500.0,   sell-price: 3360.0 }
+      '22': { material: REDSTONE_BLOCK,    name: '&cKızıltaş Bloğu',    lore: ['&7Sıkıştırılmış kızıltaş'],  buy-price: 10800.0,   sell-price: 2700.0 }
+    subcategories: {}
+
+
+  # ==================== YEMEK ====================
+  food:
+    name: '&e&lYemek'
+    description: ['&7Lezzetli yemekler', '&7Göz atmak için tıkla!']
+    icon: COOKED_BEEF
+    slot: 14
+    permission: ''
+    items:
+      '0':  { material: APPLE,                  name: '&cElma',                    lore: ['&7Açlığı 4 dindirir'],     buy-price: 300.0,     sell-price: 60.0 }
+      '1':  { material: BREAD,                  name: '&eEkmek',                   lore: ['&7Açlığı 5 dindirir'],     buy-price: 450.0,     sell-price: 120.0 }
+      '2':  { material: COOKED_BEEF,            name: '&6Biftek',                  lore: ['&7Açlığı 8 dindirir'],     buy-price: 1200.0,    sell-price: 300.0 }
+      '3':  { material: COOKED_PORKCHOP,        name: '&6Pişmiş Domuz Pirzolası',  lore: ['&7Açlığı 8 dindirir'],     buy-price: 1200.0,    sell-price: 300.0 }
+      '4':  { material: COOKED_CHICKEN,         name: '&6Pişmiş Tavuk',            lore: ['&7Açlığı 6 dindirir'],     buy-price: 900.0,     sell-price: 210.0 }
+      '5':  { material: COOKED_MUTTON,          name: '&6Pişmiş Koyun Eti',        lore: ['&7Açlığı 6 dindirir'],     buy-price: 1050.0,    sell-price: 240.0 }
+      '6':  { material: COOKED_COD,             name: '&6Pişmiş Morina',           lore: ['&7Açlığı 5 dindirir'],     buy-price: 750.0,     sell-price: 180.0 }
+      '7':  { material: COOKED_SALMON,          name: '&6Pişmiş Somon',            lore: ['&7Açlığı 6 dindirir'],     buy-price: 900.0,     sell-price: 210.0 }
+      '8':  { material: CAKE,                   name: '&dPasta',                   lore: ['&7Yerleştirilebilir yemek'],buy-price: 2400.0,    sell-price: 600.0 }
+      '9':  { material: COOKIE,                 name: '&6Kurabiye',                lore: ['&7Açlığı 2 dindirir'],     buy-price: 300.0,     sell-price: 60.0 }
+      '10': { material: PUMPKIN_PIE,            name: '&6Balkabağı Turtası',       lore: ['&7Açlığı 8 dindirir'],     buy-price: 1500.0,    sell-price: 360.0 }
+      '11': { material: HONEY_BOTTLE,           name: '&6Bal Şişesi',              lore: ['&7Zehri iyileştirir'],     buy-price: 900.0,     sell-price: 210.0 }
+      '12': { material: GOLDEN_APPLE,           name: '&6Altın Elma',              lore: ['&7Yenilenme etkisi'],      buy-price: 24000.0,   sell-price: 6000.0 }
+      '13': { material: ENCHANTED_GOLDEN_APPLE, name: '&d&lBüyülü Altın Elma',     lore: ['&7Güçlü etkiler'],         buy-price: 900000.0,  sell-price: 225000.0 }
+      '14': { material: GOLDEN_CARROT,          name: '&6Altın Havuç',             lore: ['&7Gece görüşü'],           buy-price: 18000.0,   sell-price: 4500.0 }
+    subcategories: {}
+
+
+  # ==================== TARIM ====================
+  farming:
+    name: '&2&lTarım'
+    description: ['&7Tohum, mahsul ve malzemeler', '&7Göz atmak için tıkla!']
+    icon: WHEAT
+    slot: 16
+    permission: ''
+    items:
+      '0':  { material: WHEAT,         name: '&eBuğday',          lore: ['&7Tarım mahsulü'],       buy-price: 300.0,   sell-price: 60.0 }
+      '1':  { material: WHEAT_SEEDS,   name: '&aTohum',           lore: ['&7Ekilebilir'],          buy-price: 90.0,    sell-price: 30.0 }
+      '2':  { material: CARROT,        name: '&6Havuç',           lore: ['&7Yemek ve tarım'],      buy-price: 240.0,   sell-price: 60.0 }
+      '3':  { material: POTATO,        name: '&ePatates',         lore: ['&7Yemek ve tarım'],      buy-price: 240.0,   sell-price: 60.0 }
+      '4':  { material: BAKED_POTATO,  name: '&6Fırınlanmış Patates',lore: ['&7Pişmiş yemek'],    buy-price: 600.0,   sell-price: 150.0 }
+      '5':  { material: BEETROOT,      name: '&cPancar',          lore: ['&7Yemek ve kırmızı boya'],buy-price: 240.0,  sell-price: 60.0 }
+      '6':  { material: SUGAR_CANE,    name: '&aŞeker Kamışı',    lore: ['&7Şeker/kağıt için'],    buy-price: 240.0,   sell-price: 60.0 }
+      '7':  { material: BAMBOO,        name: '&aBambu',           lore: ['&7Hızlı büyür'],         buy-price: 180.0,   sell-price: 45.0 }
+      '8':  { material: CACTUS,        name: '&aKaktüs',          lore: ['&7Çöl bitkisi'],         buy-price: 300.0,   sell-price: 60.0 }
+      '9':  { material: KELP,          name: '&2Yosun',           lore: ['&7Okyanus bitkisi'],     buy-price: 180.0,   sell-price: 45.0 }
+      '10': { material: COCOA_BEANS,   name: '&6Kakao Çekirdeği', lore: ['&7Çikolata'],            buy-price: 300.0,   sell-price: 60.0 }
+      '11': { material: NETHER_WART,   name: '&cNether Siğili',   lore: ['&7İksir yapımı'],        buy-price: 900.0,   sell-price: 210.0 }
+      '12': { material: PUMPKIN,       name: '&6Balkabağı',       lore: ['&7Dekorasyon'],          buy-price: 600.0,   sell-price: 150.0 }
+      '13': { material: MELON,         name: '&aKavun',           lore: ['&7Sulu'],                buy-price: 600.0,   sell-price: 150.0 }
+      '14': { material: EGG,           name: '&fYumurta',         lore: ['&7Tavuk ürünü'],         buy-price: 450.0,   sell-price: 120.0 }
+      '15': { material: HONEYCOMB,     name: '&6Bal Peteği',      lore: ['&7Mum için'],            buy-price: 1200.0,  sell-price: 300.0 }
+      '16': { material: OAK_SAPLING,   name: '&aMeşe Fidanı',     lore: ['&7Ahşap için dik'],      buy-price: 300.0,   sell-price: 60.0 }
+      '17': { material: BONE_MEAL,     name: '&fKemik Tozu',      lore: ['&7Büyümeyi hızlandırır'],buy-price: 300.0,   sell-price: 60.0 }
+      '18': { material: WOOL,          name: '&fYün',             lore: ['&7Koyundan'],            buy-price: 450.0,   sell-price: 120.0 }
+      '19': { material: LEATHER,       name: '&6Deri',            lore: ['&7İnek düşürmesi'],      buy-price: 900.0,   sell-price: 210.0 }
+    subcategories: {}
+
+
+  # ==================== ALETLER ====================
+  tools:
+    name: '&b&lAletler'
+    description: ['&7Temel aletler ve teçhizat', '&7Göz atmak için tıkla!']
+    icon: DIAMOND_PICKAXE
+    slot: 19
+    permission: ''
+    items:
+      '0':  { material: WOODEN_PICKAXE,    name: '&6Tahta Kazma',       lore: ['&7Temel kazma'],          buy-price: 900.0,      sell-price: 210.0 }
+      '1':  { material: STONE_PICKAXE,     name: '&7Taş Kazma',         lore: ['&7Sağlam kazma'],         buy-price: 2400.0,     sell-price: 600.0 }
+      '2':  { material: IRON_PICKAXE,      name: '&fDemir Kazma',       lore: ['&7Güvenilir kazma'],      buy-price: 9000.0,     sell-price: 2250.0 }
+      '3':  { material: GOLDEN_PICKAXE,    name: '&6Altın Kazma',       lore: ['&7Hızlı ama dayanıksız'], buy-price: 12000.0,    sell-price: 3000.0 }
+      '4':  { material: DIAMOND_PICKAXE,   name: '&bElmas Kazma',       lore: ['&7Birinci sınıf kazma'],  buy-price: 60000.0,    sell-price: 15000.0 }
+      '5':  { material: NETHERITE_PICKAXE, name: '&4&lNetherit Kazma',  lore: ['&7Son seviye alet'],      buy-price: 750000.0,   sell-price: 187500.0 }
+      '6':  { material: WOODEN_AXE,        name: '&6Tahta Balta',       lore: ['&7Temel balta'],          buy-price: 900.0,      sell-price: 210.0 }
+      '7':  { material: STONE_AXE,         name: '&7Taş Balta',         lore: ['&7Sağlam balta'],         buy-price: 2400.0,     sell-price: 600.0 }
+      '8':  { material: IRON_AXE,          name: '&fDemir Balta',       lore: ['&7Güvenilir balta'],      buy-price: 9000.0,     sell-price: 2250.0 }
+      '9':  { material: DIAMOND_AXE,       name: '&bElmas Balta',       lore: ['&7Birinci sınıf balta'],  buy-price: 60000.0,    sell-price: 15000.0 }
+      '10': { material: WOODEN_SHOVEL,     name: '&6Tahta Kürek',       lore: ['&7Temel kürek'],          buy-price: 600.0,      sell-price: 150.0 }
+      '11': { material: STONE_SHOVEL,      name: '&7Taş Kürek',         lore: ['&7Sağlam kürek'],         buy-price: 1500.0,     sell-price: 360.0 }
+      '12': { material: IRON_SHOVEL,       name: '&fDemir Kürek',       lore: ['&7Güvenilir kürek'],      buy-price: 6000.0,     sell-price: 1500.0 }
+      '13': { material: DIAMOND_SHOVEL,    name: '&bElmas Kürek',       lore: ['&7Birinci sınıf kürek'],  buy-price: 36000.0,    sell-price: 9000.0 }
+      '14': { material: WOODEN_HOE,        name: '&6Tahta Çapa',        lore: ['&7Tarım aleti'],          buy-price: 600.0,      sell-price: 150.0 }
+      '15': { material: STONE_HOE,         name: '&7Taş Çapa',          lore: ['&7Tarım aleti'],          buy-price: 1500.0,     sell-price: 360.0 }
+      '16': { material: IRON_HOE,          name: '&fDemir Çapa',        lore: ['&7Tarım aleti'],          buy-price: 6000.0,     sell-price: 1500.0 }
+      '17': { material: DIAMOND_HOE,       name: '&bElmas Çapa',        lore: ['&7Tarım aleti'],          buy-price: 36000.0,    sell-price: 9000.0 }
+      '18': { material: SHEARS,            name: '&fMakas',             lore: ['&7Yün için'],             buy-price: 3000.0,     sell-price: 750.0 }
+      '19': { material: FLINT_AND_STEEL,   name: '&7Çakmak Taşı ve Çelik',lore: ['&7Ateş yakar'],         buy-price: 2400.0,     sell-price: 600.0 }
+      '20': { material: FISHING_ROD,       name: '&6Olta',              lore: ['&7Balık tutmak için'],    buy-price: 1500.0,     sell-price: 360.0 }
+      '21': { material: BUCKET,            name: '&fKova',              lore: ['&7Boş kova'],             buy-price: 7500.0,     sell-price: 1860.0 }
+      '22': { material: WATER_BUCKET,      name: '&bSu Kovası',         lore: ['&7Dolu kova'],            buy-price: 9000.0,     sell-price: 2250.0 }
+      '23': { material: LAVA_BUCKET,       name: '&cLav Kovası',        lore: ['&7Tehlikeli'],            buy-price: 12000.0,    sell-price: 3000.0 }
+      '24': { material: COMPASS,           name: '&fPusula',            lore: ['&7Spawn noktasını gösterir'],buy-price: 6000.0,  sell-price: 1500.0 }
+      '25': { material: CLOCK,             name: '&6Saat',              lore: ['&7Zamanı gösterir'],      buy-price: 9000.0,     sell-price: 2250.0 }
+    subcategories: {}
+
+
+  # ==================== SAVAŞ ====================
+  combat:
+    name: '&c&lSavaş'
+    description: ['&7Silahlar ve zırhlar', '&7Göz atmak için tıkla!']
+    icon: DIAMOND_SWORD
+    slot: 21
+    permission: ''
+    items:
+      '0':  { material: WOODEN_SWORD,     name: '&6Tahta Kılıç',        lore: ['&7Temel silah'],           buy-price: 750.0,       sell-price: 180.0 }
+      '1':  { material: STONE_SWORD,      name: '&7Taş Kılıç',          lore: ['&7İdare eder silah'],      buy-price: 1800.0,      sell-price: 450.0 }
+      '2':  { material: IRON_SWORD,       name: '&fDemir Kılıç',        lore: ['&7Standart silah'],        buy-price: 10500.0,     sell-price: 2610.0 }
+      '3':  { material: GOLDEN_SWORD,     name: '&6Altın Kılıç',        lore: ['&7Hızlı ama dayanıksız'],  buy-price: 15000.0,     sell-price: 3750.0 }
+      '4':  { material: DIAMOND_SWORD,    name: '&bElmas Kılıç',        lore: ['&7Güçlü silah'],           buy-price: 54000.0,     sell-price: 13500.0 }
+      '5':  { material: NETHERITE_SWORD,  name: '&4&lNetherit Kılıç',   lore: ['&7Son seviye silah'],      buy-price: 660000.0,    sell-price: 165000.0 }
+      '6':  { material: BOW,              name: '&6Yay',                lore: ['&7Menzilli savaş'],        buy-price: 4500.0,      sell-price: 1110.0 }
+      '7':  { material: CROSSBOW,         name: '&6Arbalet',            lore: ['&7Menzilli savaş'],        buy-price: 12000.0,     sell-price: 3000.0 }
+      '8':  { material: ARROW,            name: '&fOk',                 lore: ['&7Mühimmat'],              buy-price: 240.0,       sell-price: 60.0 }
+      '9':  { material: SPECTRAL_ARROW,   name: '&eHayalet Ok',         lore: ['&7Parlayan oklar'],        buy-price: 900.0,       sell-price: 210.0 }
+      '10': { material: TIPPED_ARROW,     name: '&dUçlu Ok',            lore: ['&7Etkili oklar'],          buy-price: 2400.0,      sell-price: 600.0 }
+      '11': { material: SHIELD,           name: '&6Kalkan',             lore: ['&7Hasarı engeller'],       buy-price: 6000.0,      sell-price: 1500.0 }
+      '12': { material: TRIDENT,          name: '&bÜç Dişli Mızrak',    lore: ['&7Boğulmuş düşürmesi'],    buy-price: 150000.0,    sell-price: 37500.0 }
+      '13': { material: WOODEN_SPEAR,     name: '&6Tahta Mızrak',       lore: ['&7Kademe 1 binek silahı'], buy-price: 1500.0,      sell-price: 375.0 }
+      '14': { material: STONE_SPEAR,      name: '&7Taş Mızrak',         lore: ['&7Kademe 2 binek silahı'], buy-price: 3600.0,      sell-price: 900.0 }
+      '15': { material: COPPER_SPEAR,     name: '&cBakır Mızrak',       lore: ['&7Kademe 3 binek silahı'], buy-price: 7500.0,      sell-price: 1860.0 }
+      '16': { material: IRON_SPEAR,       name: '&fDemir Mızrak',       lore: ['&7Kademe 4 binek silahı'], buy-price: 18000.0,     sell-price: 4500.0 }
+      '17': { material: GOLDEN_SPEAR,     name: '&6Altın Mızrak',       lore: ['&7Kademe 5 binek silahı'], buy-price: 30000.0,     sell-price: 7500.0 }
+      '18': { material: DIAMOND_SPEAR,    name: '&bElmas Mızrak',       lore: ['&7Kademe 6 binek silahı'], buy-price: 90000.0,     sell-price: 22500.0 }
+      '19': { material: NETHERITE_SPEAR,  name: '&4&lNetherit Mızrak',  lore: ['&7Kademe 7 son seviye'],   buy-price: 750000.0,    sell-price: 187500.0 }
+      '20': { material: MACE,             name: '&e&lTopuz',            lore: ['&7Ağır vuruş silahı'],     buy-price: 150000.0,    sell-price: 37500.0 }
+    subcategories:
+      armor:
+        name: '&c&lZırh'
+        description: ['&7Koruyucu teçhizat']
+        icon: DIAMOND_CHESTPLATE
+        slot: 0
+        permission: ''
+        items:
+          '0':  { material: LEATHER_HELMET,         name: '&6Deri Başlık',           lore: ['&7Temel zırh'],           buy-price: 1800.0,     sell-price: 450.0 }
+          '1':  { material: LEATHER_CHESTPLATE,     name: '&6Deri Göğüslük',         lore: ['&7Temel zırh'],           buy-price: 3000.0,     sell-price: 750.0 }
+          '2':  { material: LEATHER_LEGGINGS,       name: '&6Deri Pantolon',         lore: ['&7Temel zırh'],           buy-price: 2700.0,     sell-price: 660.0 }
+          '3':  { material: LEATHER_BOOTS,          name: '&6Deri Bot',              lore: ['&7Temel zırh'],           buy-price: 1500.0,     sell-price: 360.0 }
+          '4':  { material: CHAINMAIL_HELMET,       name: '&7Zincir Başlık',         lore: ['&7Orta zırh'],            buy-price: 6000.0,     sell-price: 1500.0 }
+          '5':  { material: CHAINMAIL_CHESTPLATE,   name: '&7Zincir Göğüslük',       lore: ['&7Orta zırh'],            buy-price: 10500.0,    sell-price: 2610.0 }
+          '6':  { material: CHAINMAIL_LEGGINGS,     name: '&7Zincir Pantolon',       lore: ['&7Orta zırh'],            buy-price: 9000.0,     sell-price: 2250.0 }
+          '7':  { material: CHAINMAIL_BOOTS,        name: '&7Zincir Bot',            lore: ['&7Orta zırh'],            buy-price: 5400.0,     sell-price: 1350.0 }
+          '8':  { material: IRON_HELMET,            name: '&fDemir Başlık',          lore: ['&7Kafa koruması'],        buy-price: 12000.0,    sell-price: 3000.0 }
+          '9':  { material: IRON_CHESTPLATE,        name: '&fDemir Göğüslük',        lore: ['&7Göğüs koruması'],       buy-price: 21000.0,    sell-price: 5250.0 }
+          '10': { material: IRON_LEGGINGS,          name: '&fDemir Pantolon',        lore: ['&7Bacak koruması'],       buy-price: 18000.0,    sell-price: 4500.0 }
+          '11': { material: IRON_BOOTS,             name: '&fDemir Bot',             lore: ['&7Ayak koruması'],        buy-price: 10500.0,    sell-price: 2610.0 }
+          '12': { material: GOLDEN_HELMET,          name: '&6Altın Başlık',          lore: ['&7Parlak zırh'],          buy-price: 18000.0,    sell-price: 4500.0 }
+          '13': { material: GOLDEN_CHESTPLATE,      name: '&6Altın Göğüslük',        lore: ['&7Parlak zırh'],          buy-price: 30000.0,    sell-price: 7500.0 }
+          '14': { material: GOLDEN_LEGGINGS,        name: '&6Altın Pantolon',        lore: ['&7Parlak zırh'],          buy-price: 27000.0,    sell-price: 6750.0 }
+          '15': { material: GOLDEN_BOOTS,           name: '&6Altın Bot',             lore: ['&7Parlak zırh'],          buy-price: 15000.0,    sell-price: 3750.0 }
+          '16': { material: DIAMOND_HELMET,         name: '&bElmas Başlık',          lore: ['&7Netherit öncesi en iyi'],buy-price: 60000.0,   sell-price: 15000.0 }
+          '17': { material: DIAMOND_CHESTPLATE,     name: '&bElmas Göğüslük',        lore: ['&7Netherit öncesi en iyi'],buy-price: 105000.0,  sell-price: 26250.0 }
+          '18': { material: DIAMOND_LEGGINGS,       name: '&bElmas Pantolon',        lore: ['&7Netherit öncesi en iyi'],buy-price: 90000.0,   sell-price: 22500.0 }
+          '19': { material: DIAMOND_BOOTS,          name: '&bElmas Bot',             lore: ['&7Netherit öncesi en iyi'],buy-price: 45000.0,   sell-price: 11250.0 }
+          '20': { material: NETHERITE_HELMET,       name: '&4&lNetherit Başlık',     lore: ['&7Son seviye zırh'],      buy-price: 1200000.0,  sell-price: 300000.0 }
+          '21': { material: NETHERITE_CHESTPLATE,   name: '&4&lNetherit Göğüslük',   lore: ['&7Son seviye zırh'],      buy-price: 1800000.0,  sell-price: 450000.0 }
+          '22': { material: NETHERITE_LEGGINGS,     name: '&4&lNetherit Pantolon',   lore: ['&7Son seviye zırh'],      buy-price: 1500000.0,  sell-price: 375000.0 }
+          '23': { material: NETHERITE_BOOTS,        name: '&4&lNetherit Bot',        lore: ['&7Son seviye zırh'],      buy-price: 1050000.0,  sell-price: 262500.0 }
+          '24': { material: COPPER_NAUTILUS_ARMOR,  name: '&cBakır Nautilus Zırhı',  lore: ['&7Kademe 1 nautilus zırhı'],buy-price: 9000.0,   sell-price: 2250.0 }
+          '25': { material: GOLDEN_NAUTILUS_ARMOR,  name: '&6Altın Nautilus Zırhı',  lore: ['&7Kademe 2 nautilus zırhı'],buy-price: 24000.0,  sell-price: 6000.0 }
+          '26': { material: IRON_NAUTILUS_ARMOR,    name: '&fDemir Nautilus Zırhı',  lore: ['&7Kademe 3 nautilus zırhı'],buy-price: 60000.0,  sell-price: 15000.0 }
+          '27': { material: DIAMOND_NAUTILUS_ARMOR, name: '&bElmas Nautilus Zırhı',  lore: ['&7Kademe 4 nautilus zırhı'],buy-price: 180000.0, sell-price: 45000.0 }
+          '28': { material: NETHERITE_NAUTILUS_ARMOR,name: '&4&lNetherit Nautilus Zırhı',lore: ['&7Kademe 5 nautilus zırhı'],buy-price: 900000.0,sell-price: 225000.0 }
+        subcategories: {}
+
+
+  # ==================== İKSİRLER ====================
+  potions:
+    name: '&d&lİksirler ve İksir Yapımı'
+    description: ['&7İksirler ve malzemeler']
+    icon: BREWING_STAND
+    slot: 23
+    permission: ''
+    items:
+      '0':  { material: POTION,                   name: '&dİksir',                lore: ['&7Temel iksir'],        buy-price: 3000.0,    sell-price: 750.0 }
+      '1':  { material: SPLASH_POTION,            name: '&dSıçratma İksiri',      lore: ['&7Fırlatılabilir'],     buy-price: 5400.0,    sell-price: 1350.0 }
+      '2':  { material: LINGERING_POTION,         name: '&dKalıcı İksir',         lore: ['&7Alan etkisi'],        buy-price: 9000.0,    sell-price: 2250.0 }
+      '3':  { material: GLASS_BOTTLE,             name: '&fCam Şişe',             lore: ['&7Boş şişe'],           buy-price: 450.0,     sell-price: 120.0 }
+      '4':  { material: BREWING_STAND,            name: '&6İksir Tezgahı',        lore: ['&7İksir için'],         buy-price: 9000.0,    sell-price: 2250.0 }
+      '5':  { material: BLAZE_POWDER,             name: '&6Blaze Tozu',           lore: ['&7İksir yakıtı'],       buy-price: 1800.0,    sell-price: 450.0 }
+      '6':  { material: BLAZE_ROD,                name: '&6Blaze Çubuğu',         lore: ['&7Blaze düşürmesi'],    buy-price: 3600.0,    sell-price: 900.0 }
+      '7':  { material: GHAST_TEAR,               name: '&fGhast Gözyaşı',        lore: ['&7Yenilenme'],          buy-price: 18000.0,   sell-price: 4500.0 }
+      '8':  { material: MAGMA_CREAM,              name: '&6Magma Kremi',          lore: ['&7Ateş direnci'],       buy-price: 7500.0,    sell-price: 1860.0 }
+      '9':  { material: FERMENTED_SPIDER_EYE,     name: '&cFermente Örümcek Gözü',lore: ['&7İksir yapımı'],       buy-price: 2400.0,    sell-price: 600.0 }
+      '10': { material: GLISTERING_MELON_SLICE,   name: '&6Parıldayan Kavun',     lore: ['&7İyileştirme'],        buy-price: 4500.0,    sell-price: 1110.0 }
+      '11': { material: RABBIT_FOOT,              name: '&6Tavşan Ayağı',         lore: ['&7Zıplama'],            buy-price: 12000.0,   sell-price: 3000.0 }
+      '12': { material: PHANTOM_MEMBRANE,         name: '&bHayalet Zarı',         lore: ['&7Yavaş düşme'],        buy-price: 7500.0,    sell-price: 1860.0 }
+      '13': { material: DRAGON_BREATH,            name: '&5Ejderha Nefesi',       lore: ['&7Kalıcı iksirler'],    buy-price: 90000.0,   sell-price: 22500.0 }
+    subcategories: {}
+
+
+  # ==================== KIZILTAŞ ====================
+  redstone:
+    name: '&c&lKızıltaş'
+    description: ['&7Kızıltaş bileşenleri']
+    icon: REDSTONE
+    slot: 25
+    permission: ''
+    items:
+      '0':  { material: REDSTONE_TORCH,     name: '&cKızıltaş Meşalesi',   lore: ['&7Güç kaynağı'],        buy-price: 900.0,     sell-price: 210.0 }
+      '1':  { material: REPEATER,           name: '&7Yineleyici',          lore: ['&7Sinyal gecikmesi'],   buy-price: 2400.0,    sell-price: 600.0 }
+      '2':  { material: COMPARATOR,         name: '&7Karşılaştırıcı',      lore: ['&7Sinyal karşılaştırma'],buy-price: 3600.0,   sell-price: 900.0 }
+      '3':  { material: PISTON,             name: '&7Piston',              lore: ['&7Blok iter'],          buy-price: 4500.0,    sell-price: 1110.0 }
+      '4':  { material: STICKY_PISTON,      name: '&7Yapışkan Piston',     lore: ['&7İt ve çek'],          buy-price: 6000.0,    sell-price: 1500.0 }
+      '5':  { material: OBSERVER,           name: '&7Gözlemci',            lore: ['&7Değişiklik algılar'], buy-price: 7500.0,    sell-price: 1860.0 }
+      '6':  { material: DISPENSER,          name: '&7Dağıtıcı',            lore: ['&7Otomatik atar'],      buy-price: 3600.0,    sell-price: 900.0 }
+      '7':  { material: DROPPER,            name: '&7Bırakıcı',            lore: ['&7Eşya bırakır'],       buy-price: 3000.0,    sell-price: 750.0 }
+      '8':  { material: HOPPER,             name: '&7Huni',                lore: ['&7Otomatik toplar'],    buy-price: 10500.0,   sell-price: 2610.0 }
+      '9':  { material: RAIL,               name: '&7Ray',                 lore: ['&7Taşıma'],             buy-price: 750.0,     sell-price: 180.0 }
+      '10': { material: POWERED_RAIL,       name: '&6Güçlü Ray',           lore: ['&7Vagon hızlandırır'],  buy-price: 5400.0,    sell-price: 1350.0 }
+      '11': { material: DETECTOR_RAIL,      name: '&7Dedektör Ray',        lore: ['&7Vagon algılar'],      buy-price: 2700.0,    sell-price: 660.0 }
+      '12': { material: DAYLIGHT_DETECTOR,  name: '&7Gün Işığı Sensörü',   lore: ['&7Işık algılar'],       buy-price: 4500.0,    sell-price: 1110.0 }
+      '13': { material: TARGET,             name: '&7Hedef',               lore: ['&7Mermi sensörü'],      buy-price: 3900.0,    sell-price: 960.0 }
+      '14': { material: SLIME_BALL,         name: '&aBalçık Topu',         lore: ['&7Yapışkan'],           buy-price: 1800.0,    sell-price: 450.0 }
+      '15': { material: SLIME_BLOCK,        name: '&aBalçık Bloğu',        lore: ['&7Zıplatır'],           buy-price: 16500.0,   sell-price: 4110.0 }
+      '16': { material: HONEY_BLOCK,        name: '&6Bal Bloğu',           lore: ['&7Yapışkan blok'],      buy-price: 16500.0,   sell-price: 4110.0 }
+      '17': { material: TRIPWIRE_HOOK,      name: '&7Tuzak Kancası',       lore: ['&7Tuzak tetikleyici'],  buy-price: 1800.0,    sell-price: 450.0 }
+      '18': { material: LEVER,              name: '&7Kol',                 lore: ['&7Basit anahtar'],      buy-price: 900.0,     sell-price: 210.0 }
+    subcategories: {}
+
+
+  # ==================== ÇEŞİTLİ ====================
+  misc:
+    name: '&d&lÇeşitli'
+    description: ['&7Faydalı eşyalar']
+    icon: CHEST
+    slot: 31
+    permission: ''
+    items:
+      '0':  { material: TORCH,                  name: '&eMeşale',                    lore: ['&7Ortamı aydınlatır'],       buy-price: 240.0,       sell-price: 60.0 }
+      '1':  { material: ENDER_PEARL,            name: '&5Ender İncisi',              lore: ['&7Işınlanma aracı'],          buy-price: 6000.0,      sell-price: 1500.0 }
+      '2':  { material: EXPERIENCE_BOTTLE,      name: '&aBüyüleme Şişesi',           lore: ['&7Tecrübe içerir'],           buy-price: 7500.0,      sell-price: 1860.0 }
+      '3':  { material: ENDER_EYE,              name: '&5Ender Gözü',                lore: ['&7Kale yerini bulur'],        buy-price: 12000.0,     sell-price: 3000.0 }
+      '4':  { material: NAMETAG,                name: '&fİsim Etiketi',              lore: ['&7Yaratık isimlendirir'],     buy-price: 15000.0,     sell-price: 3750.0 }
+      '5':  { material: SADDLE,                 name: '&6Eyer',                      lore: ['&7Binek için'],               buy-price: 30000.0,     sell-price: 7500.0 }
+      '6':  { material: LEAD,                   name: '&fTasma',                     lore: ['&7Yaratık bağlar'],           buy-price: 6000.0,      sell-price: 1500.0 }
+      '7':  { material: ELYTRA,                 name: '&5&lElytra',                  lore: ['&7Gökyüzünde süzül'],         buy-price: 900000.0,    sell-price: 225000.0 }
+      '8':  { material: TOTEM_OF_UNDYING,       name: '&6&lÖlümsüzlük Totemi',       lore: ['&7Ölümü bir kez engeller'],   buy-price: 600000.0,    sell-price: 150000.0 }
+      '9':  { material: SHULKER_SHELL,          name: '&dShulker Kabuğu',            lore: ['&7Shulker kutusu için'],      buy-price: 45000.0,     sell-price: 11250.0 }
+      '10': { material: SHULKER_BOX,            name: '&dShulker Kutusu',            lore: ['&7Taşınabilir depolama'],     buy-price: 120000.0,    sell-price: 30000.0 }
+      '11': { material: SCAFFOLDING,            name: '&6İskele',                    lore: ['&7Tırmanılabilir'],           buy-price: 1200.0,      sell-price: 300.0 }
+      '12': { material: BOOK,                   name: '&6Kitap',                     lore: ['&7Büyüleme için'],            buy-price: 900.0,       sell-price: 210.0 }
+      '13': { material: BOOKSHELF,              name: '&6Kitaplık',                  lore: ['&7Büyüleme gücü'],            buy-price: 9000.0,      sell-price: 2250.0 }
+      '14': { material: ANVIL,                  name: '&7Örs',                       lore: ['&7Eşya tamir eder'],          buy-price: 15000.0,     sell-price: 3750.0 }
+      '15': { material: GRINDSTONE,             name: '&7Bileme Taşı',               lore: ['&7Tamir/büyü çözer'],         buy-price: 9000.0,      sell-price: 2250.0 }
+      '16': { material: ENCHANTING_TABLE,       name: '&5Büyüleme Masası',           lore: ['&7Eşya büyüler'],             buy-price: 60000.0,     sell-price: 15000.0 }
+      '17': { material: ENDER_CHEST,            name: '&5Ender Sandığı',             lore: ['&7Kişisel depolama'],         buy-price: 36000.0,     sell-price: 9000.0 }
+      '18': { material: TRIAL_KEY,              name: '&eDeneme Anahtarı',           lore: ['&7Normal kasaları açar'],     buy-price: 15000.0,     sell-price: 3750.0 }
+      '19': { material: OMINOUS_TRIAL_KEY,      name: '&6Uğursuz Deneme Anahtarı',   lore: ['&7Uğursuz kasaları açar'],    buy-price: 60000.0,     sell-price: 15000.0 }
+      '20': { material: BREEZE_ROD,             name: '&bEsinti Çubuğu',             lore: ['&7Topuz yapım malzemesi'],    buy-price: 24000.0,     sell-price: 6000.0 }
+      '21': { material: HEAVY_CORE,             name: '&8Ağır Çekirdek',             lore: ['&7Topuz çekirdeği - nadir'],  buy-price: 180000.0,    sell-price: 45000.0 }
+      '22': { material: NETHERITE_HORSE_ARMOR,  name: '&4&lNetherit At Zırhı',       lore: ['&7Son seviye binek koruması'],buy-price: 1050000.0,   sell-price: 262500.0 }
+    subcategories: {}
+
+
+  # ==================== SPAWNERLAR ====================
+  # Kristal ile satılır. Asıl satın alma kristal.sk'daki /spawner_satin_al komutuyla.
+  spawners:
+    name: '&5&lSpawnerlar'
+    description: ['&7Kristal ile spawner satın al', '&7En düşük: &b100 kristal', '&7Bakiye: &b/kristalbakiye']
+    icon: SPAWNER
+    slot: 33
+    permission: ''
+    items:
+      '0':
+        material: SPAWNER
+        name: '&7&lZombie Spawner'
+        lore: ['&a&lBAŞLANGIÇ', '&7Fiyat: &b100 kristal', '&7(~8,3 saat AFK)', '&7Drops: Çürük Et, Nadir Demir', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al zombie %player%'
+      '1':
+        material: SPAWNER
+        name: '&7&lSpider Spawner'
+        lore: ['&a&lBAŞLANGIÇ', '&7Fiyat: &b120 kristal', '&7(~10 saat AFK)', '&7Drops: İp, Örümcek Gözü', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al spider %player%'
+      '2':
+        material: SPAWNER
+        name: '&7&lSkeleton Spawner'
+        lore: ['&a&lBAŞLANGIÇ', '&7Fiyat: &b150 kristal', '&7(~12,5 saat AFK)', '&7Drops: Kemik, Ok', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al skeleton %player%'
+      '3':
+        material: SPAWNER
+        name: '&7&lCave Spider Spawner'
+        lore: ['&a&lBAŞLANGIÇ', '&7Fiyat: &b180 kristal', '&7(~15 saat AFK)', '&7Drops: İp, Örümcek Gözü', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al cave_spider %player%'
+      '4':
+        material: SPAWNER
+        name: '&7&lCreeper Spawner'
+        lore: ['&a&lBAŞLANGIÇ', '&7Fiyat: &b200 kristal', '&7(~16,7 saat AFK)', '&7Drops: Barut', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al creeper %player%'
+      '5':
+        material: SPAWNER
+        name: '&e&lWitch Spawner'
+        lore: ['&e&lORTA', '&7Fiyat: &b350 kristal', '&7(~1,2 gün AFK)', '&7Drops: Kızıltaş, Parıltı', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al witch %player%'
+      '6':
+        material: SPAWNER
+        name: '&e&lChicken Spawner'
+        lore: ['&e&lORTA', '&7Fiyat: &b450 kristal', '&7(~1,6 gün AFK)', '&7Drops: Tavuk, Tüy, Yumurta', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al chicken %player%'
+      '7':
+        material: SPAWNER
+        name: '&e&lSheep Spawner'
+        lore: ['&e&lORTA', '&7Fiyat: &b550 kristal', '&7(~1,9 gün AFK)', '&7Drops: Yün, Koyun Eti', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al sheep %player%'
+      '8':
+        material: SPAWNER
+        name: '&e&lPig Spawner'
+        lore: ['&e&lORTA', '&7Fiyat: &b650 kristal', '&7(~2,3 gün AFK)', '&7Drops: Domuz Pirzolası', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al pig %player%'
+      '9':
+        material: SPAWNER
+        name: '&6&lCow Spawner'
+        lore: ['&6&lYÜKSEK', '&7Fiyat: &b1000 kristal', '&7(~3,5 gün AFK)', '&7Drops: Deri, Biftek', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al cow %player%'
+      '10':
+        material: SPAWNER
+        name: '&6&lMagma Cube Spawner'
+        lore: ['&6&lYÜKSEK', '&7Fiyat: &b1500 kristal', '&7(~5,2 gün AFK)', '&7Drops: Magma Kremi', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al magma_cube %player%'
+      '11':
+        material: SPAWNER
+        name: '&6&lBlaze Spawner'
+        lore: ['&6&lYÜKSEK', '&7Fiyat: &b2000 kristal', '&7(~7 gün AFK)', '&7Drops: Blaze Çubuğu', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al blaze %player%'
+      '12':
+        material: SPAWNER
+        name: '&6&lEnderman Spawner'
+        lore: ['&6&lYÜKSEK', '&7Fiyat: &b3000 kristal', '&7(~10,4 gün AFK)', '&7Drops: Ender İncisi', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al enderman %player%'
+      '13':
+        material: SPAWNER
+        name: '&5&lVillager Spawner'
+        lore: ['&5&lEFSANEVİ', '&7Fiyat: &b5000 kristal', '&7(~17,4 gün AFK)', '&7Drops: Köylü Ticareti', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al villager %player%'
+      '14':
+        material: SPAWNER
+        name: '&4&lIron Golem Spawner'
+        lore: ['&4&lEFSANEVİ', '&7Fiyat: &b8000 kristal', '&7(~27,8 gün AFK)', '&7Drops: Demir Külçesi, Haşhaş', '', '&eTıkla: Satın Al']
+        command: 'spawner_satin_al iron_golem %player%'
+    subcategories: {}
+
+shop-version: 4

@@ -1,0 +1,74 @@
+# ============================================
+#   SimpleShop - Mesajlar
+#   Renk kodları: &a &l ... ve &#rrggbb
+#   {yer_tutucu} değerleri otomatik doldurulur
+# ============================================
+
+prefix: "&8[&6Market&8] &r"
+
+no-permission: "&cBunun için yetkin yok."
+player-only: "&cBu komut sadece oyun içinden kullanılabilir."
+no-categories: "&cMarkette hiç kategori yok. shop.yml dosyasını kontrol et."
+unknown-category: "&cKategori bulunamadı: &f{category}"
+unknown-currency: "&cPara birimi bulunamadı: &f{currency}"
+player-not-found: "&cOyuncu bulunamadı: &f{player}"
+invalid-amount: "&cGeçersiz miktar: &f{amount}"
+currency-unavailable: "&c{currency} para birimi şu an kullanılamıyor. &7(Vault veya ekonomi eklentisi eksik olabilir)"
+transaction-failed: "&cİşlem başarısız oldu."
+command-failed: "&cKomut çalıştırılamadı. Ücret iade edildi."
+reloaded: "&aSimpleShop yeniden yüklendi. &7({categories} kategori, {items} eşya, {currencies} para birimi)"
+info: "&6SimpleShop &7v{version} &8- &f{categories} &7kategori, &f{items} &7eşya, &f{currencies} &7para birimi"
+
+buy:
+  success: "&a{amount}x &f{item} &asatın alındı. &7(-&f{price}&7)"
+  not-enough-money: "&cYeterli paran yok. Gereken: &f{price}&c, bakiyen: &f{balance}"
+  inventory-full: "&cEnvanterinde yer yok."
+  not-buyable: "&cBu eşya satın alınamaz."
+
+sell:
+  success: "&a{amount}x &f{item} &asatıldı. &7(+&f{price}&7)"
+  all-success: "&a{amount} eşya satıldı. &7Kazanç: &f{total}"
+  no-items: "&cEnvanterinde satılabilir &f{item} &cyok."
+  not-sellable: "&cBu eşya satılamaz."
+  not-plain: "&cBüyülü, isimli veya hasarlı eşyalar satılamaz."
+  nothing-in-hand: "&cElinde eşya yok."
+  nothing-sellable: "&cEnvanterinde satılabilir eşya yok."
+  usage: "&7Kullanım: &f/{label} <hand|all>"
+
+currency:
+  usage: "&7Kullanım: &f/{label} <balance|list|pay|give|take|set>"
+  usage-pay: "&7Kullanım: &f/currency pay <oyuncu> <para-birimi> <miktar>"
+  usage-admin: "&7Kullanım: &f/currency {action} <oyuncu> <para-birimi> <miktar>"
+  balance-header: "&6Bakiyen:"
+  balance-header-other: "&6{player} bakiyesi:"
+  balance-line: " &8» &7{currency}: &f{balance}"
+  balance-single: "&7{player} &8» &7{currency}: &f{balance}"
+  list-header: "&6Para birimleri:"
+  list-line: " &8» &f{id} &7- {name} &8({status}){default}"
+  not-enough: "&cYeterli {currency} yok. Bakiyen: &f{balance}"
+  pay-self: "&cKendine para gönderemezsin."
+  pay-sent: "&a{player} oyuncusuna &f{amount} &agönderdin."
+  pay-received: "&a{player} sana &f{amount} &agönderdi."
+  give-success: "&a{player} oyuncusuna &f{amount} &aeklendi."
+  take-success: "&a{player} oyuncusundan &f{amount} &aalındı."
+  take-failed: "&c{player} oyuncusunda yeterli bakiye yok. &7(Bakiye: &f{balance}&7)"
+  set-success: "&a{player} bakiyesi &f{amount} &aolarak ayarlandı."
+  set-unsupported: "&c{currency} için bakiye ayarlanamaz. &7(give/take kullan)"
+
+gui:
+  main-title: "&8Market"
+  category-title: "{name} &8| &7{page}/{pages}"
+  back: "&c« Geri"
+  close: "&cKapat"
+  previous: "&e« Önceki Sayfa"
+  next: "&eSonraki Sayfa »"
+  page-info: "&7Sayfa &f{page}&7/&f{pages}"
+  balance-title: "&6Bakiyen"
+  balance-line: "&7{currency}: &f{balance}"
+  buy-price: "&aAlış: &f{price}"
+  sell-price: "&cSatış: &f{price}"
+  command-price: "&bFiyat: &f{price}"
+  hint-buy: "&eSol Tık &8» &71 adet al"
+  hint-buy-stack: "&eShift + Sol Tık &8» &7{amount} adet al"
+  hint-sell: "&eSağ Tık &8» &71 adet sat"
+  hint-sell-all: "&eShift + Sağ Tık &8» &7Envanterdeki hepsini sat"
